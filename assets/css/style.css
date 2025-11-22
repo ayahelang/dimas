@@ -3,16 +3,30 @@ body {
     font-family: "Inter", sans-serif;
     background: #fff;
     color: #111;
+    padding: 0 10px 0 10px;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
+    display:flex;
+    justify-content:flex-start;
     padding: 20px 40px;
     position: sticky;
     top: 0;
-    background: #ffffffcc;
+    background: #f6f0f0cc;
     backdrop-filter: blur(10px);
+}
+
+nav {
+    display:flex;
+    overflow:scroll;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+nav a {
+    background: #dae1ee;
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
 }
 
 .navbar a {
@@ -20,10 +34,29 @@ body {
     text-decoration: none;
 }
 
+.navbar a:hover {
+    background: #420101cc;
+    color: #fff;
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+}
+
+.navbar a:active {
+    background: #db0606cc;
+    color: #fff;
+    transform: scale(1.1);
+}
+
 .hero {
     padding: 100px 40px;
     text-align: center;
     background: #f5f6f8;
+}
+
+.hero-content {
+    display:flex ;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .title {
@@ -39,10 +72,14 @@ body {
 
 .btn {
     padding: 12px 20px;
-    background: black;
+    background: rgb(0, 0, 0);
     color: white;
     text-decoration: none;
     border-radius: 6px;
+}
+
+.btn:hover {
+    background: rgb(69, 56, 56)
 }
 
 .btn-outline {
