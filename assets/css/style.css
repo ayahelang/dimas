@@ -11,7 +11,7 @@ body {
     /* pastikan lebih tinggi dari gambar */
     display: flex;
     justify-content: flex-start;
-    padding: 20px 40px;
+    padding: 20px 10px;
     position: sticky;
     top: 0;
     background: #f6f0f0cc;
@@ -19,6 +19,7 @@ body {
 }
 
 nav {
+    margin-left: 20px;
     display: flex;
     overflow: scroll;
     scrollbar-width: none;
@@ -32,11 +33,12 @@ nav a {
 }
 
 .navbar a {
-    margin-left: 20px;
+    margin-left: 2px;
     text-decoration: none;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+nav a.active {
     background: #420101cc;
     color: #fff;
     padding: 5px 15px 5px 15px;
@@ -47,6 +49,17 @@ nav a {
     background: #db0606cc;
     color: #fff;
     transform: scale(1.1);
+}
+
+section.page-header img {
+    width: 50%;
+}
+
+/* HP (≤720px) */
+@media (max-width: 900px) {
+    section.page-header img {
+        width: 100%
+    }
 }
 
 .hero {
@@ -107,7 +120,7 @@ nav a {
     border-radius: 8px;
 }
 
-section img {
+section.content-container img {
     float: left;
     margin: 0 16px 12px 0;
     margin-right: 30px;
@@ -118,32 +131,38 @@ section img {
 
 section ul,
 section ol {
-    list-style-position:outside;
+    list-style-position: outside;
     padding-left: 28px;
-    
+
 }
 
 .portfolio-card {
     position: relative;
-    overflow: hidden;
 }
 
-.portfolio-card div:hover {
+.portfolio-card div img {
     width: fit-content;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.28);
-    transform: translateY(-4px);
-    border-radius: 0px;
+    max-width: 100%;
+    /*transition: transform 0.3s ease, transform-origin 0.2s ease;*/
 }
 
 .portfolio-card div {
+    width: 300px;
     overflow: hidden;
-    width: fit-content;
     transition: box-shadow .3s ease, transform .3s ease;
-    border-radius: 20px;
+    border-radius: 0px;
 }
 
-.portfolio-card img {
-    width: 300px;
-    max-width: 100%;
-    transition: transform 0.3s ease, transform-origin 0.2s ease;
+/* Tablet (≤900px) */
+@media (max-width: 900px) {
+    .portfolio-card div img {
+        width: 60%;
+    }
+}
+
+/* HP (≤720px) */
+@media (max-width: 720px) {
+    .portfolio-card div img {
+        width: 70%;
+    }
 }

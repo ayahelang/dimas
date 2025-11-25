@@ -1,4 +1,4 @@
-document.querySelectorAll(".portfolio-card img").forEach(img => {
+document.querySelectorAll(".portfolio-card div img").forEach(img => {
 
     img.addEventListener("mousemove", e => {
         const rect = img.getBoundingClientRect();
@@ -14,4 +14,3 @@ document.querySelectorAll(".portfolio-card img").forEach(img => {
         img.style.transformOrigin = "center center";
     });
 });
-  
